@@ -7,7 +7,6 @@ const router = express.Router()
 
 /**
   [GET] /api/schemes
-
   response:
   [
     {
@@ -33,7 +32,6 @@ router.get('/', (req, res, next) => {
 
 /*
   [GET] /api/schemes/2
-
   response:
   {
     "scheme_id": 2,
@@ -64,7 +62,6 @@ router.get('/:scheme_id', checkSchemeId, (req, res, next) => {
 
 /*
   [GET] /api/schemes/2/steps
-
   response:
   [
     {
@@ -93,7 +90,6 @@ router.get('/:scheme_id/steps', checkSchemeId, (req, res, next) => {
 
 /*
   [POST] /api/schemes { "scheme_name": "Take Ovah" }
-
   response:
   {
     "scheme_id": 8,
@@ -112,7 +108,6 @@ router.post('/', validateScheme, (req, res, next) => {
 
 /*
   [POST] /api/schemes/5/steps { "instructions": "and yet more questing", "step_number": 2 }
-
   response:
   [
     {
